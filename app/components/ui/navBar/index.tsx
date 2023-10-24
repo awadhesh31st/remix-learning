@@ -1,9 +1,9 @@
-import { NavLink } from '@remix-run/react'
-import { NavBarMock } from '~/mocks/navbar-mock'
-import { type NavLinkClassProps } from '~/types/navbar-type'
+import { NavLink } from '@remix-run/react';
+import { NavBarMock } from '~/mocks/navbar-mock';
+import { type NavLinkClassProps } from '~/types/navbar-type';
 
 const NavBar = () => {
-  const content = NavBarMock
+  const content = NavBarMock;
   return (
     <nav className="flex items-center gap-4 px-4 py-2">
       {content?.map((nav, key) => {
@@ -23,10 +23,10 @@ const NavBar = () => {
           >
             <span className="p-0 m-0">{nav.title}</span>
           </NavLink>
-        )
+        );
       })}
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

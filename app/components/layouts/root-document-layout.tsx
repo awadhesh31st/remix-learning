@@ -1,9 +1,9 @@
-import { Links, LiveReload, Meta, Scripts } from '@remix-run/react'
-import React from 'react'
-import NavBar from '../ui/navBar'
+import { Links, LiveReload, Meta, Scripts } from '@remix-run/react';
+import React from 'react';
+import NavBar from '../ui/navBar';
 
 export interface RootDocumentLayoutProps {
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
 const RootDocumentLayout: React.FC<RootDocumentLayoutProps> = ({
@@ -15,14 +15,14 @@ const RootDocumentLayout: React.FC<RootDocumentLayoutProps> = ({
         <Meta />
         <Links />
       </head>
-      <body className="p-0 m-0 bg-white">
+      <body className="p-0 m-0 bg-white" suppressHydrationWarning={true}>
         <NavBar />
         {children}
         <Scripts />
         {process.env.NODE_ENV === 'development' ? <LiveReload /> : null}
       </body>
     </html>
-  )
-}
+  );
+};
 
-export default RootDocumentLayout
+export default RootDocumentLayout;
