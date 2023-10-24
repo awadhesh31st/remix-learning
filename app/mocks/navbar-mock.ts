@@ -1,4 +1,4 @@
-import { type NavBarProps } from '~/types/navbar-type'
+import { type NavBarProps } from '~/types/navbar-type';
 
 export const NavBarMock: NavBarProps[] = [
   {
@@ -13,4 +13,4 @@ export const NavBarMock: NavBarProps[] = [
     title: 'Contact',
     path: '/contact',
   },
-]
+];
