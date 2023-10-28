@@ -15,10 +15,11 @@ import { Suspense } from 'react';
 import InputForm from '~/components/form-components/input';
 import DataList from '~/components/ui/list';
 import { type ErrorProps } from '~/types/error-type';
+import { type PhotoListProps } from '~/types/api-data-type';
+import { getPhotos } from '~/api/photos';
 
 export const loader: LoaderFunction = async () => {
-  const photoList = await fetch('https://jsonplaceholder.typicode.com/photos');
-  const data = await photoList.json();
+  const data: PhotoListProps[] =  await getPhotos()
   const splitData = data.slice(0, 15);
   return { photos: splitData };
 };
